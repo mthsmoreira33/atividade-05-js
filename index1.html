@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let studentsAge = [];
+
+        while (true) {
+            const age = Number(prompt("Digite a idade do aluno: "));
+            if (age === 999) {
+                break;
+            }
+            studentsAge.push(age);
+        }
+        let sumAges = 0;
+
+        for (i = 0; i < studentsAge.length; i++) {
+            sumAges += studentsAge[i]
+        }
+
+        console.log(`A turma tem: ${studentsAge.length} alunos`);
+        console.log(`A média de idade de alunos é: ${sumAges / studentsAge.length}`)
+    </script>
+</body>
+</html>

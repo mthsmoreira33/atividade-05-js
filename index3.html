@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let firstValue = parseInt(prompt("Digite o primeiro valor: "));
+        let secondValue = parseInt(prompt("Digite o segundo valor"));
+
+        if (firstValue > secondValue) {
+            const decremento = parseInt(prompt("Digite o decremento"));
+            while (firstValue > secondValue) {
+                console.log(firstValue);
+                firstValue = firstValue - decremento;
+            }
+        } else {
+            const incremento = parseInt(prompt("Digite o incremento"));
+            while (firstValue < secondValue) {
+                console.log(firstValue);
+                firstValue = firstValue + incremento;
+            }
+        }
+        console.log("Fim!");
+    </script>
+</body>
+</html>

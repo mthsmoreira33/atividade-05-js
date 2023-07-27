@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const width = Number(prompt("Digite a largura do terreno: "));
+        const length = Number(prompt("Digite o comprimento do terreno: "));
+        const squareMeter = length * width;
+
+        if (squareMeter <= 100) {
+            alert("Terreno popular");
+        } else if (squareMeter > 100 && squareMeter <= 500) {
+            alert("Terreno master");
+        } else if (squareMeter > 500) {
+            alert("Terreno VIP");
+        }
+    </script>
+</body>
+</html>

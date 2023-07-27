@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let menWage = [];
+        let womenWage = [];
+        let continuePrompt = "";
+
+        while(continuePrompt.toLowerCase() !== "n") {
+            const gender = prompt("Digite o gênero do funcionário: [h] para homem [m] para mulher ");
+            if (gender.toLowerCase() === "h" || gender.toLowerCase() === "m") {
+                const wage = parseFloat(prompt("Digite o salário"));
+                switch (gender.toLowerCase()) {
+                    case "h":
+                        menWage.push(wage);
+                        break;
+                    case "m":
+                        womenWage.push(wage);
+                        break;
+                    default:
+                        alert("Opção Inválida");
+                        break;
+                }
+            } else {
+                alert("Opção inválida");
+                break;
+            }
+
+            continuePrompt = prompt("Deseja continuar? [s] para sim e [n] para não.");
+
+            switch (continuePrompt.toLowerCase()) {
+                case "s":
+                    continue;
+                case "n":
+                    break;
+                default:
+                    alert("Opção inválida");
+                    continue;
+            }
+        }
+
+        let sumMenWage = 0;
+        let sumWomenWage = 0;
+
+        for (i = 0; i < menWage.length; i++) {
+            sumMenWage += menWage[i];
+        }
+
+        for (let i = 0; i < womenWage.length; i++) {
+            sumWomenWage += womenWage[i];
+        }
+
+        alert(`Soma de salário dos homens: ${sumMenWage} \n Soma do salário das mulheres: ${sumWomenWage}`);
+    </script>
+</body>
+</html>

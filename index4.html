@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const name = prompt("Digite o nome do cliente: ");
+        const gender = prompt("Digite o gênero do cliente: \n[h] para homem \n[m] para mulher");
+        let valorCompras = prompt("Digite o total das compras:")
+
+        switch (gender.toLowerCase()) {
+            case "h":
+                valorCompras = valorCompras - (valorCompras * 0.05);
+                break;
+            case "m":
+                valorCompras = valorCompras - (valorCompras * 0.13);
+                break;
+            default:
+                alert("Opção inválida!");
+                break;
+        }
+    </script>
+</body>
+</html>
